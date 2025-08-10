@@ -1,0 +1,7 @@
+recipes:
+  docker:
+    description: Docker
+    ubuntu: docker/ubuntu.yml
+  hello-world:
+    description: Hello World
+    ubuntu: hello-world/ubuntu.yml

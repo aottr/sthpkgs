@@ -1,0 +1,7 @@
+distro: ubuntu
+arch: amd64
+name: hello-world
+deps:
+  - curl
+steps:
+  - echo "Hello World"
