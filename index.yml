@@ -5,3 +5,9 @@ recipes:
   hello-world:
     description: Hello World
     ubuntu: hello-world/ubuntu.yml
+  k9s:
+    description: K9s
+    ubuntu: k9s/ubuntu.yml
+  kubectl:
+    description: kubectl
+    ubuntu: kubectl/ubuntu.yml
