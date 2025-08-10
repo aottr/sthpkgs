@@ -11,3 +11,6 @@ recipes:
   kubectl:
     description: kubectl
     ubuntu: kubectl/ubuntu.yml
+  sops:
+    description: SOPS
+    ubuntu: sops/ubuntu.yml
