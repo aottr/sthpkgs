@@ -1,9 +1,7 @@
-distro: ubuntu
-arch: amd64
 name: sops
-deps:
-  apt:
-    - curl
+target:
+  os: linux
+  arch: amd64
 steps:
   - |
     VERSION=$(curl -s https://api.github.com/repos/getsops/sops/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')

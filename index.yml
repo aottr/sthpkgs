@@ -24,4 +24,11 @@ recipes:
   sops:
     slug: sops
     name: SOPS
-    path: sops/ubuntu.yml
+    os: linux
+    arch: amd64
+    path: sops/linux_amd64.yml
+  spotify:
+    slug: spotify
+    name: Spotify
+    family: debian
+    path: spotify/debian.yml
