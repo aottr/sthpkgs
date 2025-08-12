@@ -1,9 +1,8 @@
-distro: ubuntu
-arch: amd64
-name: kubectl
+name: k9s
+target:
+  family: debian
+  arch: amd64
 deps:
-  apt:
-    - curl
   recipes:
     - kubectl
 steps:

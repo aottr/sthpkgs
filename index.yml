@@ -1,16 +1,27 @@
 recipes:
-  docker:
-    description: Docker
-    ubuntu: docker/ubuntu.yml
+  docker-ubuntu:
+    slug: docker
+    name: Docker (Ubuntu)
+    path: docker/ubuntu.yml
+    distro: ubuntu
   hello-world:
+    slug: hello-world
+    name: Test output
     description: Hello World
-    ubuntu: hello-world/ubuntu.yml
-  k9s:
-    description: K9s
-    ubuntu: k9s/ubuntu.yml
-  kubectl:
-    description: kubectl
-    ubuntu: kubectl/ubuntu.yml
+    path: hello-world/generic.yml
+  k9s-debian-amd64:
+    slug: k9s
+    name: K9s
+    family: debian
+    arch: amd64
+    path: k9s/debian_amd64.yml
+  kubectl-linux-amd64:
+    slug: kubectl
+    name: kubectl
+    os: linux
+    arch: amd64
+    path: kubectl/linux_amd64.yml
   sops:
-    description: SOPS
-    ubuntu: sops/ubuntu.yml
+    slug: sops
+    name: SOPS
+    path: sops/ubuntu.yml
