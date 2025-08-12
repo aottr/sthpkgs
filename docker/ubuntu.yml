@@ -1,6 +1,6 @@
-distro: ubuntu
-arch: amd64
 name: docker
+target:
+  distro: ubuntu
 deps:
   apt:
     - ca-certificates
