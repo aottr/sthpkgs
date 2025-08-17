@@ -1,0 +1,21 @@
+name: nvim
+slug: nvim
+description: Neovim editor
+scope: user
+target:
+  os: [linux, darwin]
+  arch: [amd64, arm64]
+
+artifact:
+  name: nvim
+  version:
+    type: githubRelease
+    repo: neovim/neovim
+  # Vendor naming:
+  # - OS: linux | macos (for darwin)
+  # - Arch: x86_64 (for amd64) | arm64
+  urlTemplate: >
+    https://github.com/neovim/neovim/releases/download/v{{ .Version }}/nvim-{{ if eq .OS "darwin" }}macos{{ else }}{{ .OS }}{{ end }}-{{ if eq .Arch "amd64" }}x86_64{{ else }}{{ .Arch }}{{ end }}.tar.gz
+  format: "tar.gz"
+  binName: "nvim"
+  mode: "0755"

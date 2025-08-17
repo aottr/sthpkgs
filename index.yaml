@@ -1,0 +1,36 @@
+recipes:
+    kubectl@darwin|linux,amd64|arm64:
+        slug: kubectl
+        name: kubectl
+        description: Kubernetes CLI
+        path: recipes/kubectl/recipe.yml
+        os:
+            - darwin
+            - linux
+        arch:
+            - amd64
+            - arm64
+        scope: user
+    nvim@darwin|linux,amd64|arm64:
+        slug: nvim
+        name: nvim
+        description: Neovim editor
+        path: recipes/nvim/recipe.yml
+        os:
+            - darwin
+            - linux
+        arch:
+            - amd64
+            - arm64
+        scope: user
+    nvim@linux,amd64|arm64:
+        slug: nvim
+        name: nvim
+        description: Neovim editor (AppImage)
+        path: recipes/nvim.appimage/recipe.yml
+        os:
+            - linux
+        arch:
+            - amd64
+            - arm64
+        scope: user

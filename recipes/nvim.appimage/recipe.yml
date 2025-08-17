@@ -1,0 +1,17 @@
+name: nvim
+slug: nvim
+description: Neovim editor (AppImage)
+scope: user
+target:
+  os: ["linux"]
+  arch: ["amd64", "arm64"]
+
+artifact:
+  name: nvim
+  version:
+    type: githubRelease
+    repo: neovim/neovim
+  urlTemplate: "https://github.com/neovim/neovim/releases/download/v{{ .Version }}/nvim-linux-x86_64.appimage"
+  format: "raw"
+  binName: "nvim"
+  mode: "0755"

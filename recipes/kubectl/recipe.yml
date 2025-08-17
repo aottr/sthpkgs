@@ -3,8 +3,8 @@ slug: kubectl
 description: Kubernetes CLI
 scope: user
 target:
-  os: linux
-  arch: amd64
+  os: [linux,darwin]
+  arch: [amd64,arm64]
 artifact:
   name: kubectl
   version:
