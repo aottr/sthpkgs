@@ -1,6 +1,19 @@
 name: kubectl
+slug: kubectl
+description: Kubernetes CLI
+scope: user
 target:
   os: linux
   arch: amd64
-steps:
-  - curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+artifact:
+  name: kubectl
+  version:
+    type: regex
+    url: "https://dl.k8s.io/release/stable.txt"
+    pattern: "^v(?P<version>[0-9][^\\s]+)$"
+    fallback: "1.30.2"
+  urlTemplate: "https://dl.k8s.io/release/v{{ .Version }}/bin/{{ .OS }}/{{ .Arch }}/kubectl"
+  sha256Template: "https://dl.k8s.io/release/v{{ .Version }}/bin/{{ .OS }}/{{ .Arch }}/kubectl.sha256"
+  format: "raw"
+  binName: "kubectl"
+  mode: "0755"
