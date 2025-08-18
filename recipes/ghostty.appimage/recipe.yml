@@ -1,0 +1,17 @@
+name: Ghostty (Unofficial)
+slug: ghostty
+description: Fast, feature-rich, and cross-platform terminal emulator
+scope: user
+target:
+  os: ["linux"]
+  arch: ["amd64"]
+
+artifact:
+  name: ghostty
+  version:
+    type: githubRelease
+    repo: ghostty-org/ghostty # AppImage versions are not clean
+  urlTemplate: "https://github.com/pkgforge-dev/ghostty-appimage/releases/latest/download/Ghostty-{{ .Version }}-x86_64.AppImage"
+  format: "raw"
+  binName: "Ghostty"
+  mode: "0755"

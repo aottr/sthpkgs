@@ -1,0 +1,22 @@
+name: lazygit
+slug: lazygit
+description: simple terminal UI for git commands
+scope: user
+target:
+  os: [linux, darwin]
+  arch: [amd64, arm64]
+
+artifact:
+  name: lazygit
+  version:
+    type: githubRelease
+    repo: jesseduffield/lazygit
+  # Vendor naming:
+  # - OS: linux | macos (for darwin)
+  # - Arch: x86_64 (for amd64) | arm64
+  urlTemplate: >
+    https://github.com/jesseduffield/lazygit/releases/download/v{{ .Version }}/lazygit_{{ .Version }}_{{ .OS }}_{{ if eq .Arch "amd64" }}x86_64{{ else }}{{ .Arch }}{{ end }}.tar.gz
+  #TODO add checksum, search for hex string and filename
+  format: "tar.gz"
+  binName: "lazygit"
+  mode: "0755"

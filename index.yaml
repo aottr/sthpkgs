@@ -23,11 +23,33 @@ recipes:
             - amd64
             - arm64
         scope: user
+    ghostty.appimage@linux-amd64:
+        slug: ghostty
+        name: Ghostty (Unofficial)
+        description: Fast, feature-rich, and cross-platform terminal emulator
+        path: recipes/ghostty.appimage/recipe.yml
+        os:
+            - linux
+        arch:
+            - amd64
+        scope: user
     kubectl:
         slug: kubectl
         name: kubectl
         description: Kubernetes CLI
         path: recipes/kubectl/recipe.yml
+        os:
+            - darwin
+            - linux
+        arch:
+            - amd64
+            - arm64
+        scope: user
+    lazygit:
+        slug: lazygit
+        name: lazygit
+        description: simple terminal UI for git commands
+        path: recipes/lazygit/recipe.yml
         os:
             - darwin
             - linux
