@@ -1,4 +1,16 @@
 recipes:
+    age:
+        slug: age
+        name: age
+        description: A simple, modern and secure encryption tool
+        path: recipes/age/recipe.yml
+        os:
+            - darwin
+            - linux
+        arch:
+            - amd64
+            - arm64
+        scope: user
     fzf:
         slug: fzf
         name: fzf
