@@ -1,0 +1,14 @@
+name: nvm
+slug: nvm
+description: Node Version Manager
+scope: user
+target:
+  os: ["linux", "darwin"]
+artifact:
+  version:
+    type: githubRelease
+    repo: nvm-sh/nvm
+actions:
+  - type: shell
+    args:
+      cmd: 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v{{ .Version }}/install.sh | bash'

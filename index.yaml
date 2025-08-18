@@ -46,3 +46,12 @@ recipes:
             - amd64
             - arm64
         scope: user
+    nvm@darwin|linux:
+        slug: nvm
+        name: nvm
+        description: Node Version Manager
+        path: recipes/nvm/recipe.yml
+        os:
+            - darwin
+            - linux
+        scope: user

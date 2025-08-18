@@ -13,6 +13,5 @@ artifact:
   urlTemplate: >
     https://github.com/junegunn/fzf/releases/download/v{{ .Version }}/fzf-{{ .Version }}-{{ .OS }}_{{ .Arch }}.tar.gz
   format: "tar.gz"
-  innerPath: bin/fzf
   binName: fzf
   mode: "0755"
