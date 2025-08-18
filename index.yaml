@@ -1,5 +1,5 @@
 recipes:
-    fzf@darwin|linux,amd64|arm64:
+    fzf:
         slug: fzf
         name: fzf
         description: A command-line fuzzy finder
@@ -11,7 +11,7 @@ recipes:
             - amd64
             - arm64
         scope: user
-    kubectl@darwin|linux,amd64|arm64:
+    kubectl:
         slug: kubectl
         name: kubectl
         description: Kubernetes CLI
@@ -23,7 +23,7 @@ recipes:
             - amd64
             - arm64
         scope: user
-    nvim@darwin|linux,amd64|arm64:
+    nvim:
         slug: nvim
         name: nvim
         description: Neovim editor
@@ -35,7 +35,7 @@ recipes:
             - amd64
             - arm64
         scope: user
-    nvim@linux,amd64|arm64:
+    nvim.appimage:
         slug: nvim
         name: nvim
         description: Neovim editor (AppImage)
@@ -46,7 +46,7 @@ recipes:
             - amd64
             - arm64
         scope: user
-    nvm@darwin|linux:
+    nvm:
         slug: nvm
         name: nvm
         description: Node Version Manager
@@ -55,7 +55,7 @@ recipes:
             - darwin
             - linux
         scope: user
-    sops@darwin|linux,amd64|arm64:
+    sops:
         slug: sops
         name: sops
         description: Simple and flexible tool for managing secrets
