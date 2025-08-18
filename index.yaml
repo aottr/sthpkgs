@@ -55,3 +55,15 @@ recipes:
             - darwin
             - linux
         scope: user
+    sops@darwin|linux,amd64|arm64:
+        slug: sops
+        name: sops
+        description: Simple and flexible tool for managing secrets
+        path: recipes/sops/recipe.yml
+        os:
+            - darwin
+            - linux
+        arch:
+            - amd64
+            - arm64
+        scope: user

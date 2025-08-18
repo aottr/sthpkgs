@@ -1,0 +1,18 @@
+name: sops
+slug: sops
+description: Simple and flexible tool for managing secrets
+scope: user
+target:
+  os: [linux, darwin]
+  arch: [amd64, arm64]
+artifact:
+  name: sops
+  version:
+    type: githubRelease
+    repo: getsops/sops
+  urlTemplate: >
+    https://github.com/getsops/sops/releases/download/v{{ .Version }}/sops-v{{ .Version }}.{{ .OS }}.{{ .Arch }}
+  sha256Template: "https://github.com/getsops/sops/releases/download/v{{ .Version }}/sops-v{{ .Version }}.checksum.txt"
+  format: "raw"
+  binName: "sops"
+  mode: "0755"
