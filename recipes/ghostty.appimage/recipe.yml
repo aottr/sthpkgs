@@ -9,7 +9,7 @@ target:
 artifact:
   name: ghostty
   version:
-    type: githubRelease
+    type: githubTag
     repo: ghostty-org/ghostty # AppImage versions are not clean
   urlTemplate: "https://github.com/pkgforge-dev/ghostty-appimage/releases/latest/download/Ghostty-{{ .Version }}-x86_64.AppImage"
   format: "raw"
