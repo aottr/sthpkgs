@@ -17,5 +17,7 @@ artifact:
   urlTemplate: >
     https://github.com/neovim/neovim/releases/download/v{{ .Version }}/nvim-{{ if eq .OS "darwin" }}macos{{ else }}{{ .OS }}{{ end }}-{{ if eq .Arch "amd64" }}x86_64{{ else }}{{ .Arch }}{{ end }}.tar.gz
   format: "tar.gz"
+  innerPath: >
+    nvim-{{ if eq .OS "darwin" }}macos{{ else }}{{ .OS }}{{ end }}-{{ if eq .Arch "amd64" }}x86_64{{ else }}{{ .Arch }}{{ end }}/bin/nvim
   binName: "nvim"
   mode: "0755"
