@@ -12,7 +12,7 @@ artifact:
     repo: getsops/sops
   urlTemplate: >
     https://github.com/getsops/sops/releases/download/v{{ .Version }}/sops-v{{ .Version }}.{{ .OS }}.{{ .Arch }}
-  sha256Template: "https://github.com/getsops/sops/releases/download/v{{ .Version }}/sops-v{{ .Version }}.checksum.txt"
+  # sha256Template: "https://github.com/getsops/sops/releases/download/v{{ .Version }}/sops-v{{ .Version }}.checksum.txt" Currently not working due to format
   format: "raw"
   binName: "sops"
   mode: "0755"
