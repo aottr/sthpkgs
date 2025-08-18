@@ -1,4 +1,16 @@
 recipes:
+    fzf@darwin|linux,amd64|arm64:
+        slug: fzf
+        name: fzf
+        description: A command-line fuzzy finder
+        path: recipes/fzf/recipe.yml
+        os:
+            - darwin
+            - linux
+        arch:
+            - amd64
+            - arm64
+        scope: user
     kubectl@darwin|linux,amd64|arm64:
         slug: kubectl
         name: kubectl

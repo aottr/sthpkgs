@@ -1,0 +1,18 @@
+name: fzf
+slug: fzf
+description: A command-line fuzzy finder
+scope: user
+target:
+  os: [linux, darwin]
+  arch: [amd64, arm64]
+artifact:
+  name: fzf
+  version:
+    type: githubRelease
+    repo: junegunn/fzf
+  urlTemplate: >
+    https://github.com/junegunn/fzf/releases/download/v{{ .Version }}/fzf-{{ .Version }}-{{ .OS }}-{{ .Arch }}.tar.gz
+  format: "tar.gz"
+  innerPath: bin/fzf
+  binName: fzf
+  mode: "0755"
