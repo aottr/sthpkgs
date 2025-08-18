@@ -33,18 +33,18 @@ actions:
   # chmod both binaries
   - type: chmod
     args:
-      path: "{{ .InstallDir }}/bin/age"
+      path: "{{ .InstallDir }}/age/age"
       mode: "0755"
   - type: chmod
     args:
-      path: "{{ .InstallDir }}/age-keygen"
+      path: "{{ .InstallDir }}/age/age-keygen"
       mode: "0755"
   # create two symlinks in ~/.local/sth/bin
   - type: symlink
     args:
-      src: "{{ .InstallDir }}/age"
+      src: "{{ .InstallDir }}/age/age"
       dest: "{{ .BinDir }}/age"
   - type: symlink
     args:
-      src: "{{ .InstallDir }}/age-keygen"
+      src: "{{ .InstallDir }}/age/age-keygen"
       dest: "{{ .BinDir }}/age-keygen"
